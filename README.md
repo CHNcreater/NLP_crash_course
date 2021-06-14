@@ -8,10 +8,16 @@
 
 NLP速成课，NLP从入门到实践，旨在对于从事NLP相关研究和工作的同学们，分享NLP相关学习路径，学习资料以及所学所得、感想领悟。
 
+## 算法
+[算法复杂度](https://github.com/CHNcreater/NLP_crash_course/blob/main/Algorithm%20complexity/Algorithm%20complexity.md)
 
-## 词向量
-### word2vec
-[word2vec词向量的训练](https://github.com/CHNcreater/NLP_crash_course/blob/main/Word%20Embedding/Word2Vec/word2vec_gensim.md)
+## 自然语言处理一般流程 NLP pipeline
+### 分词
+[什么是分词及几大基础算法](https://github.com/CHNcreater/NLP_crash_course/blob/main/NLP%20Project%20Pipeline/Segmentation.md)
+### 文本表示
+[文本表示理论](https://github.com/CHNcreater/NLP_crash_course/blob/main/NLP%20Project%20Pipeline/Word%20Representation.md)  
+[一文读懂什么是word2vec](https://zhuanlan.zhihu.com/p/344474638)  
+[word2vec词向量的训练](https://github.com/CHNcreater/NLP_crash_course/blob/main/Word%20Embedding/Word2Vec/word2vec_gensim.md)  
 
 
 ## 损失函数 Loss fuction

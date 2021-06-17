@@ -3,11 +3,11 @@
 [TOC]
 自然语言处理项目的一般流程图如下图所示，
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_10-50-20.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_10-50-20.jpg)
 
 还有一张脑图，也能够帮助大家理解NLP整个处理流程，参考下面的图片，
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\IMG_0105.JPG)
+![](.\NLP Projects Pipeline.assets\IMG_0105.JPG)
 
 下面内容，针对NLP处理流程中的Pipeline逐一介绍各个部分的功能，主要算法和主要工具。
 
@@ -109,7 +109,7 @@ StanfordCoreNLP
 
 #### 1.2.1 前向最大匹配算法 Forward Maximum Matching
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_11-34-23.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_11-34-23.jpg)
 
 ```python
 def FMM(vocab:list, sentence:str, max_length=5):
@@ -146,7 +146,7 @@ def FMM(vocab:list, sentence:str, max_length=5):
 
 #### 1.2.2 后向最大匹配算法 Backwards Maximum Matching
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_11-38-18.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_11-38-18.jpg)
 
 ```python
 def BMM(vocab:list, sentence:str, max_length:int=5):
@@ -192,7 +192,7 @@ def BMM(vocab:list, sentence:str, max_length:int=5):
 
 具体做法，就是在分词阶段，生成所有可能的分词可能作为候选分词结果，然后输入语言模型中，为每种分词结果进行打分，取得分最高的候选分词结果为最终的分词结果。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_13-54-22.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_13-54-22.jpg)
 
 这种语言模型，可以是基于统计的语言模型，比如我们有一个海量的文本资源库，对其中的单词词频进行统计，然后得到每个单词的频率，通过下面的方式来计算。
 $$
@@ -209,7 +209,7 @@ $$
 
 通过维特比算法，将1.2中割裂的两步，融合到一起，维特比算法利用了DP的思想。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_15-07-46.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_15-07-46.jpg)
 
 ```python
 def Viterbi(vocab, vocab_frequency, sentence):
@@ -286,11 +286,11 @@ if __name__ == '__main__':
 
 如果用户写错了，某个单词，可以使用编辑距离来选择最小的相似单词，如果有多个编辑距离相同的候选单词，则还需进一步选择最适合的单词。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_15-29-42.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_15-29-42.jpg)
 
 上面这种方法，需要让用户输入与词典中每个单词都进行匹配，时间复杂度为O(V)，为了降低时间复杂度，提高效率，可以使用一种生成策略，即根据用户输入，生成编辑距离为1，2的字符串（因为用户不可能一点都输入不对，基本会落在编辑距离为1-2的范围之内），然后通过一些过滤条件，最终得到拼写纠正后的单词。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\NLP Projects Pipeline.assets\2021-06-12_15-55-57.jpg)
+![](.\NLP Projects Pipeline.assets\2021-06-12_15-55-57.jpg)
 
 ### 3 词过滤
 

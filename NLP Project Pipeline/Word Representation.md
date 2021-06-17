@@ -61,7 +61,7 @@ $tf(d,w)$代表文档d中w的词频，$idf(w)=log\frac{N}{N(w)}$，N表示语料
 
 通过一个例子来加深tf-idf的理解
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Word Representation.assets\2021-06-13_11-31-16.jpg)
+![](.\Word Representation.assets\2021-06-13_11-31-16.jpg)
 
 上述提到的几种向量表示方式，其实都属于one-hot向量，思想都是差不多的。但是上述这几种向量表示方式，并不能很好的获取单词之间的语义关联，比如“健身”和“强壮”的关联性并不能通过one-hot向量很好的体现出来。
 
@@ -80,7 +80,7 @@ $tf(d,w)$代表文档d中w的词频，$idf(w)=log\frac{N}{N(w)}$，N表示语料
 
 这里的词向量，其实就是分布式表示方法，解决了上面独热向量的两个问题。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Word Representation.assets\one-hot-distribution representation.png)
+![](.\Word Representation.assets\one-hot-distribution representation.png)
 
 100维的独热向量最多可以表大100个单词，而100维的分布式表示法，理论上可以容纳正无穷个不同单词。
 
@@ -88,7 +88,7 @@ $tf(d,w)$代表文档d中w的词频，$idf(w)=log\frac{N}{N(w)}$，N表示语料
 
 <font color="red">很多时候对我们来说，训练词向量是费时费力的，通常我们直接使用大公司训练好的词向量，但是与如遇到一些垂直领域，比如金融，医药领域，则需要我们自己训练一个领域适应的词向量。</font>
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Word Representation.assets\distribution representation.png)
+![](.\Word Representation.assets\distribution representation.png)
 
 这里我们认为，每个词向量代表了该单词的语义，代表该单词的意思。
 
@@ -114,7 +114,7 @@ ave=[0.2，0.18，0.22，0.4]
 
 在面对基于检索的问答系统时，
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Word Representation.assets\2021-06-14_11-54-23.jpg)
+![](.\Word Representation.assets\2021-06-14_11-54-23.jpg)
 
 倒排表是建立单词到文本的映射关系，以下面的句子为例，介绍一下倒排索引表。
 

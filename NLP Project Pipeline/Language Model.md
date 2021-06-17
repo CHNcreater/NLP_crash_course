@@ -69,7 +69,7 @@ $$
 
 根据不同的文法规定，采用不同的计算公式计算出对应的概率，统计的方法来计算概率就是通过计数的方式，上文提到了，如果有些单词或者单词序列在语料中不存在，那么概率会变成零，需要采用一些平滑策略来解决该问题。
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Language Model.assets\2021-06-15_16-50-51.jpg)
+![](.\Language Model.assets\2021-06-15_16-50-51.jpg)
 
 ## 4 评估语言模型
 
@@ -98,7 +98,7 @@ Perplexity = 2^{-(x)}\ \ \ \ x:average log likelihood
 $$
 通过一个例子来说明，如何计算困惑度，
 
-![](D:\yinbo.qiao\Study Folder\github\NLP_crash_course\NLP Project Pipeline\Language Model.assets\2021-06-15_20-25-29.jpg)
+![](.\Language Model.assets\2021-06-15_20-25-29.jpg)
 
 一般情况下，Trigram的训练效果是最好的，如果n更大的话，可能会过拟合，另一方面也会提升算法的时间复杂度。
 
@@ -159,7 +159,7 @@ $$
 
 ### 5.4 Good-Turning Smoothing
 
-![](D:\Document\Nutscloud\我的坚果云\git repo\NLP_crash_course\NLP Project Pipeline\Language Model.assets\2021-06-17_11-40-01.jpg)
+![](.\Language Model.assets\2021-06-17_11-40-01.jpg)
 
 将这种现象应用到语言模型的平滑中，得到了goog-turning smoothing的算法。
 
@@ -206,7 +206,7 @@ Nc的统计量不能保证一定存在，比如语料中最多出现23个重复�
 
 ## 6 利用语言模型生成句子
 
-![](D:\Document\Nutscloud\我的坚果云\git repo\NLP_crash_course\NLP Project Pipeline\Language Model.assets\2021-06-17_12-11-14.jpg)
+![](.\Language Model.assets\2021-06-17_12-11-14.jpg)
 
 ## 总结
 
